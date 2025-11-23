@@ -33,4 +33,6 @@ def ploho():
                 print('Терпит, вроде утихло...')
         except ValueError as error:
             print(f"Получено исключение {type(error)} — введите число 1, 2 или 3!")
+        finally:
+            print('Еще раз!')
 ploho()
