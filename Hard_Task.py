@@ -5,21 +5,23 @@ while True:
     a = input('введи первую букву пароля или сдайся (напиши нет)')
     b = input('введи вторую букву пароля или сдайся (напиши нет)')
     code = ord ('a')
-    c = code+25
-    rand_let1= c - random.randint(0, 25)
-    rand_let2 = c - random.randint(0, 25)
+    v = code+25
+    rand_let1= v - random.randint(0, 25)
+    rand_let2 = v - random.randint(0, 25)
     n = chr (rand_let1)
     m = chr(rand_let2)
-    if a == rand_let1:
+    if a == n:
         c += 1
-    if b == rand_let2:
+    if b == m:
         c += 1
     if c == 1:
         print('угадал 1 букву')
     if c == 2:
-        print ('ты выиграл')
+        print ('Tы выиграл')
         break
-    repeat = input("обе не верны, сыграем еще? (да/нет).Пароль был "+ n+m )
+    elif c ==0:
+        print ("Не угадал ни одной буквы. Пароль был "+ n+m)
+    repeat = input("Cыграем еще? (да/нет).")
     if repeat.strip().lower() == 'нет':
         break
 
