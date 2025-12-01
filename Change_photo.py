@@ -36,3 +36,11 @@ while True:
             print("1,2 или 3!!!")
     except Exception as e:
         print("Попробуй снова ошибка-", e)
+while True:
+        #for x in range(0:im.size):
+        y=input ('Введи новое имя файла, он сохранится в папку Photored ')
+        try:
+            im.save("photo/photored/" + y + ".jpg")
+            break
+        except Exception as d:
+            print("Попробуй снова ошибка ", d)
