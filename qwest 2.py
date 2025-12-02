@@ -1,5 +1,5 @@
 class PainLevel:
-    def init(self):
+    def __init__(self):
         self.level = 5
     def increase(self, amount=1):
         self.level = min(10, self.level + amount)
